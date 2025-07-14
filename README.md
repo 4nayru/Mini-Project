@@ -1,5 +1,5 @@
 # Mini-Project 🛒🛍️✨
-─── ⋆⋅E-Commerce⋅⋆ ──
+─── ⋆⋅E-Commerce⋅⋆ ────
 
 SKINCARE   ˚｡⋆୨୧˚ ✬ ! ⋆˙ PRODUCT
        
