@@ -1,4 +1,4 @@
-# Mini-Project
+# Mini-Project 🛒🛍️✨
 ─── ⋆⋅E-Commerce⋅⋆ ──
 
 SKINCARE  🫧🦢🪞.♡⋆ 
