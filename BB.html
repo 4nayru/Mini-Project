@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love care</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link rel="icon" href="../Image/TechGo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            secondary: '#7c3aed',
+            accent: '#db2777',
+            dark: '#0f172a',
+            light: '#f8fafc',
+            soft: '#f1f5f9'
+          },
+          transitionProperty: {
+            'colors': 'background-color, border-color, color'
+          },
+          keyframes: {
+            'accordion': {
+              '0%': { maxHeight: '0' },
+              '100%': { maxHeight: '500px' }
+            }
+          },
+          animation: {
+            'accordion': 'accordion 0.3s ease-out'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-light-text dark:bg-gray-900 dark:text-gray-200">
+  <!-- Header -->
+  <header class="bg-pink-100 dark:bg-gray-900 border-b border-pink-200 dark:border-gray-900 sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+
+        <!-- Logo (left side) -->
+        <a href="index.html" class="flex items-center space-x-3">
+          <div class="w-12 h-12">
+            <img src="https://images.scalebranding.com/heart-care-logo-c5a5346c-b932-4532-92c0-bb692dd6b976.jpg"
+              alt="Love care Logo" class="w-full h-full object-cover rounded-full">
+          </div>
+          <span class="text-2xl font-bold text-gray-800 hover:text-pink-600 transition-colors dark:text-white"
+            style="font-family: 'Caveat', cursive; font-size: 30px;">
+            Lσʋҽ <span class="text-pink-500 hover:text-blue-600">Cαɾҽ</span>
+          </span>
+        </a>
+
+        <!-- Navigation Centered -->
+        <nav class="desktop-nav hidden md:flex space-x-20 justify-center flex-1">
+          <a href="index.html" class="text-gray-700 dark:text-white hover:text-pink-600 transition-colors flex items-center justify-center">Home</a>
+          <a href="shop.html"
+            class="text-pink-600 dark:text-pink-500 font-semibold flex items-center justify-center">Shop</a>
+          <a href="about.html"
+            class="text-gray-700 dark:text-white hover:text-pink-600 transition-colors flex items-center justify-center">About</a>
+          <a href="contact.html"
+            class="text-gray-700 dark:text-white hover:text-pink-600 transition-colors flex items-center justify-center">Contact</a>
+        </nav>
+
+        <!-- Icons (right side) -->
+        <div class="flex items-center space-x-10">
+          <button id="theme-toggle" class="text-gray-600  dark:text-white text-xl">
+                        <i id="theme-icon" class="fas fa-moon"></i>
+                    </button>
+          <a href="./profile.html"><i class="fas fa-user text-gray-600 dark:text-white cursor-pointer hover:text-pink-600 transition-colors"></i></a>
+          <div class="relative">
+            <a href="./cart.html" class="block">
+              <i class="fas fa-shopping-cart text-gray-600 dark:text-white cursor-pointer hover:text-pink-600 transition-colors"></i>
+              <span
+                class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+            </a>
+          </div>
+          <i class="fas fa-bars text-gray-600 dark:text-white cursor-pointer hover:text-pink-600 transition-colors md:hidden"></i>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile menu button -->
+    <div class="md:hidden flex items-center gap-4">
+      <button class="p-2 rounded-full text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 relative">
+        <i class="fas fa-shopping-cart text-lg"></i>
+        <span
+          class="absolute top-0 end-0 bg-primary text-white text-xs rounded-full size-5 flex items-center justify-center">2</span>
+      </button>
+      <button id="mobile-menu-button"
+        class="p-2 rounded-md text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+    </div>
+    </nav>
+
+    <!-- Category Navigation -->
+    <div class="bg-pink-50 text-black dark:text-white dark:bg-pink-500 border-t border-pink-200 dark:border-pink-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex overflow-x-auto py-3 space-x-6">
+          <a href="./shop.html"
+            class="whitespace-nowrap px-3 py-1 rounded-full text-black dark:text-white text-sm font-medium hover:bg-pink-600">All
+            Products</a>
+          <a href="../BB.html"
+            class="whitespace-nowrap px-3 py-1 rounded-full bg-pink-500 text-white dark:text-black hover:bg-pink-600 dark:hover:bg-white dark:bg-white text-sm font-medium">BB
+            & Sun
+            Screen</a>
+          <a href="../night.html"
+            class="whitespace-nowrap px-3 py-1 rounded-full hover:bg-pink-500 dark:hover:bg-pink-600 text-sm font-medium">Night
+            Cream</a>
+          <a href="../Lotion.html"
+            class="whitespace-nowrap px-3 py-1 rounded-full hover:bg-pink-500 dark:hover:bg-pink-600 text-sm font-medium">Lotion
+          </a>
+          <a href="../blush.html"
+            class="whitespace-nowrap px-3 py-1 rounded-full hover:bg-pink-500 dark:hover:bg-pink-600 text-sm font-medium">Blush
+          </a>
+          <a href="../lipstick.html"
+            class="whitespace-nowrap px-3 py-1 rounded-full hover:bg-pink-500 dark:hover:bg-pink-600 text-sm font-medium">Lipstick
+          </a>
+          <a href="../cushion.html"
+            class="whitespace-nowrap px-3 py-1 rounded-full hover:bg-pink-500 dark:hover:bg-pink-600 text-sm font-medium">Cushion
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu button -->
+    <div class="md:hidden flex items-center gap-4">
+      <button class="p-2 rounded-full text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 relative">
+        <i class="fas fa-shopping-cart text-lg"></i>
+        <span
+          class="absolute top-0 end-0 bg-primary text-white text-xs rounded-full size-5 flex items-center justify-center">2</span>
+      </button>
+      <button id="mobile-menu-button"
+        class="p-2 rounded-md text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+    </div>
+    </nav>
+      </div>
+    </div>
+
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 border-t border-gray-200 dark:border-gray-700">
+      <div class="pt-4">
+        <div class="relative mb-4">
+          <input type="text" placeholder="Search laptops..."
+            class="w-full ps-10 pe-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent">
+          <i class="fas fa-search absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500"></i>
+        </div>
+        <div class="flex flex-col gap-3">
+          <a href="../../index.html"
+            class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 relative">Home</a>
+          <a href="./about.html" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 ">About</a>
+          <a href="./shop.html"
+            class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 relative after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-primary after:rounded">Shop</a>
+          <a href="./profile/wishlist.html"
+            class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 flex items-center">
+            <i class="fas fa-heart me-2"></i> Wishlist
+            <span class="ms-auto bg-accent text-white text-xs px-2 py-0.5 rounded-full">3</span>
+          </a>
+          <a href="./profile/profile.html"
+            class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 flex items-center">
+            <i class="fas fa-user me-2"></i> My Account
+          </a>
+          <a href="./loginsignup.html"
+            class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 flex items-center">
+            <i class="fa-solid fa-right-to-bracket me-3 text-gray-500 dark:text-gray-400"></i> Sign In
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col md:flex-row gap-8">
+      <!-- Mobile Filter Button (visible only on small screens) -->
+      <div class="md:hidden mb-4">
+        <button id="filterToggle"
+          class="w-full flex items-center justify-between py-2 px-4 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700">
+          <span class="font-medium text-gray-800 dark:text-white">Filters</span>
+          <svg id="filterIcon"
+            class="w-5 h-5 text-gray-600 dark:text-gray-400 transform transition-transform duration-200" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Sidebar/Dropdown Content -->
+      <aside id="filterSidebar" class="w-full md:w-64 flex-shrink-0 md:block hidden md:!block">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-32">
+          <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Filter by Brand</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="/blush.html"
+                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                <span class="text-gray-700 dark:text-gray-300">Blush</span>
+              </a>
+            </li>
+            <li>
+              <a href="./lipstick.html"
+                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                <span class="text-gray-700 dark:text-gray-300">Lipstick</span>
+              </a>
+            </li>
+            <li>
+              <a href="./cushion.html"
+                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                <span class="text-gray-700 dark:text-gray-300">Cushion</span>
+              </a>
+            </li>
+            <li>
+              <a href="./Lotion.html"
+                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+
+                <span class="text-gray-700 dark:text-gray-300">Lotion</span>
+              </a>
+            </li>
+            <li>
+              <a href="./BB.html"
+                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class="text-gray-700 dark:text-gray-300">BB & Suncreen</span>
+              </a>
+            </li>
+            <li>
+              <a href="./night.html"
+                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                <span class="text-gray-700 dark:text-gray-300">Night Cream</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="mt-8">
+            <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-gray-800">Price Range</h3>
+            <div class="space-y-4">
+              <div>
+                <label for="min-price" class="block text-sm font-medium text-pink-600 dark:text-pink-300 mb-1">
+                  Min Price
+                </label>
+                <input type="range" id="min-price" min="0" max="5000" value="500"
+                  class="w-full h-2 bg-pink-200 rounded-lg appearance-none cursor-pointer accent-pink-500">
+
+                <div class="flex justify-between text-xs text-pink-500 mt-1">
+                  <span>$0</span>
+                  <span>$10</span>
+                  <span>$10+</span>
+                </div>
+              </div>
+              <div>
+                <label for="max-price" class="block text-sm font-medium text-pink-600 dark:text-pink-300 mb-1">
+                  Max Price
+                </label>
+                <input type="range" id="min-price" min="0" max="5000" value="500"
+                  class="w-full h-2 bg-pink-200 rounded-lg appearance-none cursor-pointer accent-pink-500">
+
+                <div class="flex justify-between text-xs text-pink-500 mt-1">
+                  <span>$0</span>
+                  <span>$30</span>
+                  <span>$35+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="w-full mt-6 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-lg transition duration-200">
+            Apply Filters
+          </button>
+
+        </div>
+      </aside>
+
+      <!-- Product Grid -->
+      <div class="flex-1">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Best seller</h2>
+          <div class="flex items-center gap-2">
+            <span class="text-sm text-gray-600 dark:text-gray-400">Sort by:</span>
+            <select
+              class="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest</option>
+              <option>Best Rated</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Mixed Brand Products Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Weyoung-->
+          <a href="#">
+            <article
+              class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="relative">
+                <img
+                  src="https://s9.kh1.co/__image/w=600,h=600,fit=cover/63/63cf8e22b459120ee52f8aca72bf1e60c3861c7b.jpg"
+                  alt="cuushion" class="w-full h-48 object-cover">
+                <span class="absolute top-2 right-2 bg-pink-500 text-white text-xs px-2 py-1 rounded-full">best
+                  seller</span>
+              </div>
+              <div class="p-4">
+                <div class="flex justify-between items-start">
+                  <div>
+                    <h4 class="font-semibold text-gray-800 dark:text-white">BB Luxury</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">have in stock</p>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <div class="flex items-center mb-2">
+                    <div class="flex text-yellow-400 text-sm">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(15k)</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="font-bold text-gray-800 dark:text-white">$6.00</span>
+                    <button class="text-red-500 hover:text-pink-600">
+                      <i class="fas fa-heart text-lg"></i>
+                    </button>
+                  </div>
+                </div>
+                <button
+                  class="w-full mt-3 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                  Buy
+                </button>
+              </div>
+            </article>
+
+          </a>
+
+          <!--suncreen -->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="relative">
+              <img src="./img/suncreentynin.png" alt="lipstick" class="w-full h-48 object-cover">
+              <span class="absolute top-2 right-2 bg-pink-500 text-white text-xs px-2 py-1 rounded-full">New</span>
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-semibold text-gray-800 dark:text-white"> Tynin Suncreen</h4>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">have in stock</p>
+                </div>
+              </div>
+              <div class="mt-3">
+                <div class="flex items-center mb-2">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(15k)</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-gray-800 dark:text-white">$12.00</span>
+                  <button class="text-red-500 hover:text-pink-600">
+                    <i class="fas fa-heart text-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <button
+                class="w-full mt-3 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                Buy
+              </button>
+            </div>
+          </article>
+
+          <!-- bb rose-->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="relative">
+              <img src="https://down-my.img.susercontent.com/file/my-11134207-7r98t-lzb9mmqftjs008" alt="lotion"
+                class="w-full h-48 object-cover">
+              <span class="absolute top-2 right-2 bg-pink-500 text-white text-xs px-2 py-1 rounded-full">Best
+                Seller</span>
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-semibold text-gray-800 dark:text-white">BB Rose</h4>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">have in stock</p>
+                </div>
+              </div>
+              <div class="mt-3">
+                <div class="flex items-center mb-2">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(6k)</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-gray-800 dark:text-white">$10.00</span>
+                  <button class="text-red-500 hover:text-pink-600">
+                    <i class="fas fa-heart text-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <button
+                class="w-full mt-3 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                Buy
+              </button>
+            </div>
+          </article>
+
+          <!--Miss-->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="relative">
+              <img src="https://s9.kh1.co/__image/w=600,h=600,fit=cover/19/194ac3155cdf91c93b178231f48f9d92bd1bcc96.jpg"
+                alt="suncreen" class="w-full h-48 object-cover">
+              <span class="absolute top-2 right-2 bg-pink-500 text-white text-xs px-2 py-1 rounded-full">best
+                seller</span>
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-semibold text-gray-800 dark:text-white">BB Miss</h4>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">have in stock</p>
+                </div>
+              </div>
+              <div class="mt-3">
+                <div class="flex items-center mb-2">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(9k)</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-gray-800 dark:text-white">$8.00</span>
+                  <button class="text-red-500 hover:text-pink-600 transition">
+                    <i class="fas fa-heart text-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <button
+                class="w-full mt-3 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                Buy
+              </button>
+            </div>
+          </article>
+
+          <!--weyoung -->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="relative">
+              <img src="./img/weyoung1.png" alt="weyoung" class="w-full h-48 object-cover">
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-semibold text-gray-800 dark:text-white">Weyoung</h4>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">have in stock all code color</p>
+                </div>
+              </div>
+              <div class="mt-3">
+                <div class="flex items-center mb-2">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(30k)</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-gray-800 dark:text-white">$22.00</span>
+                  <button class="text-red-500 hover:text-pink-600 transition">
+                    <i class="fas fa-heart text-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <button
+                class="w-full mt-3 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                Buy
+              </button>
+            </div>
+          </article>
+
+          <!--Bb-->
+          <article
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            <div class="relative">
+              <img
+                src="https://static.beautytocare.com/cdn-cgi/image/width=1600,height=1600,f=auto/media/catalog/product//d/e/dermacol-bb-beauty-balance-cream-8-in-1-1-fair-30ml.jpg"
+                alt="blush" class="w-full h-48 object-cover">
+              <span class="absolute top-2 right-2 bg-pink-500 text-white text-xs px-2 py-1 rounded-full">best
+                seller</span>
+            </div>
+            <div class="p-4">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-semibold text-gray-800 dark:text-white">BB</h4>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">have 7 color</p>
+                </div>
+              </div>
+              <div class="mt-3">
+                <div class="flex items-center mb-2">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(10k)</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="font-bold text-gray-800 dark:text-white">$10.00</span>
+                  <button class="text-red-500 hover:text-pink-600 transition">
+                    <i class="fas fa-heart text-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <button
+                class="w-full mt-3 bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                Buy
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-10 flex justify-center">
+          <nav class="flex items-center gap-1">
+            <a href="#" class="px-3 py-1 rounded-md bg-pink-500 text-white hover:bg-pink-600">1</a>
+            <a href="#"
+              class="px-3 py-1 rounded-md hover:bg-pink-100 dark:hover:bg-pink-700 text-black dark:text-white">2</a>
+            <a href="#"
+              class="px-3 py-1 rounded-md hover:bg-pink-100 dark:hover:bg-pink-700 text-black dark:text-white">3</a>
+            <a href="#"
+              class="px-3 py-1 rounded-md hover:bg-pink-100 dark:hover:bg-pink-700 text-black dark:text-white">4</a>
+            <a href="#"
+              class="px-3 py-1 rounded-md hover:bg-pink-100 dark:hover:bg-pink-700 text-black dark:text-white">5</a>
+            <span class="px-3 py-1 text-black dark:text-white">...</span>
+            <a href="#"
+              class="px-3 py-1 rounded-md hover:bg-pink-100 dark:hover:bg-pink-700 text-black dark:text-white">10</a>
+            <a href="#"
+              class="px-3 py-1 rounded-md hover:bg-pink-100 dark:hover:bg-pink-700 text-black dark:text-white">
+              <i class="fas fa-chevron-right"></i>
+            </a>
+          </nav>
+        </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-pink-100 dark:bg-gray-900 dark:text white border-t border-pink-200 py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <a href="index.html" class="flex items-center space-x-3">
+                            <div class="w-12 h-12">
+                                <img src="https://images.scalebranding.com/heart-care-logo-c5a5346c-b932-4532-92c0-bb692dd6b976.jpg"
+                                    alt="Love care Logo" class="w-full h-full object-cover rounded-full">
+                            </div>
+                            <span class="text-2xl font-bold text-gray-800 hover:text-pink-600 dark:text-white transition-colors"
+                                style="font-family: 'Caveat', cursive; font-size: 30px;">
+                                Lσʋҽ <span class="text-pink-500 hover:text-blue-600">Cαɾҽ</span>
+                            </span>
+                        </a>
+                        <p class="text-gray-600 dark:text-white text-sm mb-4">Premium beauty and skincare products for your daily
+                            routine.
+                        </p>
+                        <div class="flex space-x-4 ">
+                            <a href="#" class="text-gray-600 hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-4">Quick Links</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li><a href="index.html" class="hover:text-pink-600 dark:text-white dark:hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">Home</a></li>
+                            <li><a href="shop.html" class="hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">Shop</a></li>
+                            <li><a href="about.html" class="hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">About</a></li>
+                            <li><a href="contact.html" class="hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">Contact</a></li>
+                            <li><a href="cart.html" class="hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">Cart</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-4">Customer Service</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">FAQ</a></li>
+                            <li><a href="#" class="hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">Shipping</a></li>
+                            <li><a href="#" class="hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">Returns</a></li>
+                            <li><a href="#" class="hover:text-pink-600 dark:text-white dark:hover:text-pink-600 transition-colors">Support</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-4">Contact Info</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li><i class="fas fa-envelope mr-2 dark:text-white dark:hover:text-pink-600">
+
+                            </i>info@lovecare.com</li>
+                            <li><i class="fas fa-phone mr-2 dark:text-white dark:hover:text-pink-600">
+
+                            </i>(855) 962-682-908</li>
+                            <li><i class="fas fa-map-marker-alt mr-2 dark:text-white dark:hover:text-pink-600">
+
+                            </i class="text-gray-300 dark:text-white ">123 Beauty St, Phnom Penh City</li>
+                            <!--  School Logo  -->
+                            <div class="mb-6 py-3">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">Organized by</h4>
+                                    </div>
+                                    <img src="./img/istad-logo-2024.png" alt="School Logo" class="h-16 w-auto rounded-lg">
+                                </div>
+                                <p class="text-gray-400 dark:text-white text-sm leading-relaxed">
+                                    Institute of Science and Technology Advanced Development - Premier educational
+                                    institution
+                                    shaping future innovators.
+                                </p>
+                            </div>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="border-t border-pink-200 mt-8 pt-8 text-center text-sm text-gray-600 dark:text-white dark:hover:text-pink-600">
+                    <p>&copy; 2025 Lσʋҽ <span class="text-pink-500">Cαɾҽ</span>. All rights reserved. | <a href="#"
+                            class="hover:text-pink-600">Privacy Policy</a> | <a href="#"
+                            class="hover:text-pink-600">Terms
+                            of Service</a></p>
+                </div>
+            </div>
+        </footer>
+  <script src="./Mini-Project/shop.js"></script>
+</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleBtn = document.getElementById('theme-toggle');
+            const icon = document.getElementById('theme-icon');
+            const html = document.documentElement;
+
+            // Load saved theme
+            if (localStorage.getItem('theme') === 'dark') {
+                html.classList.add('dark');
+                icon?.classList.replace('fa-moon', 'fa-sun');
+            }
+
+            toggleBtn?.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                const isDark = html.classList.contains('dark');
+                icon?.classList.toggle('fa-moon', !isDark);
+                icon?.classList.toggle('fa-sun', isDark);
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
+        });
+    </script>
+</html>
