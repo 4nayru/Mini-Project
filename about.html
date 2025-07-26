@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Love Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+        }
+        
+        .team-card {
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-card {
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-item {
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #ec4899, #db2777);
+        }
+        
+        .timeline-item:last-child::before {
+            display: none;
+        }
+        
+        .mobile-menu {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-pink-50">
+    <!-- Header -->
+    <header class="bg-pink-100 border-b border-pink-200 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center justify-center space-x-12 w-full">
+                    <a href="index.html" class="text-2xl font-bold text-gray-800 hover:text-pink-600 transition-colors">
+                        Lσʋҽ <span class="text-pink-500 hover:text-blue-600">Cαɾҽ</span>
+                    </a>
+                    <nav class="desktop-nav hidden md:flex flex-1 justify-center space-x-12">
+                        <a href="index.html" class="text-pink-600 font-semibold flex items-center justify-center">Home</a>
+                        <a href="shop.html" class="text-gray-700 hover:text-pink-600 transition-colors flex items-center justify-center">Shop</a>
+                        <a href="about.html" class="text-gray-700 hover:text-pink-600 transition-colors flex items-center justify-center">About</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-pink-600 transition-colors flex items-center justify-center">Contact</a>
+                    </nav>
+                </div>
+                <div class="flex items-center space-x-12 px-8">
+                    <div class="relative">
+                        <a href="cart.html" class="block">
+                            <i class="fas fa-shopping-cart text-gray-600 cursor-pointer hover:text-pink-600 transition-colors"></i>
+                            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+                        </a>
+                    </div>
+                    <i class="fas fa-user text-gray-600 cursor-pointer hover:text-pink-600 transition-colors"></i>
+                    <i class="fas fa-bars text-gray-600 cursor-pointer hover:text-pink-600 transition-colors md:hidden"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="hero-gradient py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">About Lσʋҽ <span class="text-pink-500">Cαɾҽ</span></h1>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We believe that beauty comes from within, and our mission is to enhance your natural radiance with premium, carefully crafted skincare products that nourish both your skin and soul.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
+                    <p class="text-gray-600 mb-4">
+                        This is the first Mini- Project from the Web Design class in ISTAD  , Lσʋҽ <span class="text-pink-500">Cαɾҽ</span> began as a small business with a simple vision: to create natural, effective skincare products that celebrate the beauty of every individual. What started in a small group has grown into a trusted brand loved by thousands worldwide.
+                    </p> 
+                    <p class="text-gray-600 mb-4">
+                        We want to create this wbsite because we all used to  struggled with sensitive skin and difficultto find the suitable Skincare products for years before discovering the power of natural ingredients. Frustrated by harsh chemicals and artificial additives in commercial products, and began experimenting with botanical extracts and essential oils in kitchen.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Today, Lσʋҽ <span class="text-pink-500">Cαɾҽ</span> continues to honor that original commitment to purity, sustainability, and effectiveness. Every product is carefully formulated with love, tested for quality, and designed to help you feel confident in your own skin.
+                    </p>
+                    <div class="flex items-center space-x-6">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-pink-600">50K+</div>
+                            <div class="text-sm text-gray-600">Happy Customers</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-pink-600">100+</div>
+                            <div class="text-sm text-gray-600">Products</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-pink-600">6</div>
+                            <div class="text-sm text-gray-600">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&h=400&fit=crop" alt="Our Story" class="rounded-lg shadow-lg w-full">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Values</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="value-card bg-pink-50 p-6 rounded-lg text-center fade-in">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Natural & Organic</h3>
+                    <p class="text-gray-600 text-sm">We use only the finest natural and organic ingredients, sourced ethically and sustainably from around the world.</p>
+                </div>
+
+                <div class="value-card bg-green-50 p-6 rounded-lg text-center fade-in">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-recycle text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Sustainability</h3>
+                    <p class="text-gray-600 text-sm">Our commitment to the environment includes eco-friendly packaging and sustainable sourcing practices.</p>
+                </div>
+
+                <div class="value-card bg-blue-50 p-6 rounded-lg text-center fade-in">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-flask text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Science-Backed</h3>
+                    <p class="text-gray-600 text-sm">Every formula is developed with scientific research and rigorously tested for safety and effectiveness.</p>
+                </div>
+
+                <div class="value-card bg-purple-50 p-6 rounded-lg text-center fade-in">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Cruelty-Free</h3>
+                    <p class="text-gray-600 text-sm">We never test on animals and are proud to be certified cruelty-free by leading organizations.</p>
+                </div>
+
+                <div class="value-card bg-yellow-50 p-6 rounded-lg text-center fade-in">
+                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Community</h3>
+                    <p class="text-gray-600 text-sm">We believe in building a supportive community where everyone feels beautiful and confident in their own skin.</p>
+                </div>
+
+                <div class="value-card bg-red-50 p-6 rounded-lg text-center fade-in">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800 mb-3">Quality</h3>
+                    <p class="text-gray-600 text-sm">We maintain the highest standards of quality in every product, from formulation to packaging.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-16 bg-pink-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Journey</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Key milestones in our growth and development</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <div class="timeline-item flex items-start space-x-6 fade-in">
+                        <div class="bg-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                            2021
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md flex-1">
+                            <h3 class="font-semibold text-gray-800 mb-2">The Beginning</h3>
+                            <p class="text-gray-600">Love Care was founded with our first product line of natural facial cleansers and moisturizers.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item flex items-start space-x-6 fade-in">
+                        <div class="bg-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                            2022
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md flex-1">
+                            <h3 class="font-semibold text-gray-800 mb-2">Expansion</h3>
+                            <p class="text-gray-600">Launched our signature oil collection and expanded to serve customers nationwide.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item flex items-start space-x-6 fade-in">
+                        <div class="bg-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                            2023
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md flex-1">
+                            <h3 class="font-semibold text-gray-800 mb-2">Recognition</h3>
+                            <p class="text-gray-600">Received "Best Natural Skincare Brand" award and reached 25,000 happy customers.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item flex items-start space-x-6 fade-in">
+                        <div class="bg-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                            2024
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md flex-1">
+                            <h3 class="font-semibold text-gray-800 mb-2">Innovation</h3>
+                            <p class="text-gray-600">Introduced our advanced anti-aging line and sustainable packaging initiative.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item flex items-start space-x-6 fade-in">
+                        <div class="bg-pink-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                            2025
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md flex-1">
+                            <h3 class="font-semibold text-gray-800 mb-2">Global Reach</h3>
+                            <p class="text-gray-600">Expanded internationally and launched our online beauty consultation service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+   <section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12 fade-in">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Team Members</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">The passionate people behind Love Care</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Team Member 1 -->
+            <div class="team-card bg-white rounded-lg shadow-md overflow-hidden fade-in">
+                <div class="aspect-square bg-gray-100">
+                    <img src="" alt="Puth Sovannary" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-semibold text-gray-800 mb-1">Puth Sovannary</h3>
+                    <p class="text-pink-600 text-sm mb-3">Leader</p>
+                    <p class="text-gray-600 text-sm mb-4">Passionate about natural beauty and sustainable business practices.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="https://www.facebook.com/ipwettyluwary?mibextid=LQQJ4d" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/__.nitchyy/" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://t.me/idk_starlvcies" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="team-card bg-white rounded-lg shadow-md overflow-hidden fade-in">
+                <div class="aspect-square bg-gray-100">
+                    <img src="" alt="Lorn Somnang" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-semibold text-gray-800 mb-1">Lorn Somnang</h3>
+                    <p class="text-pink-600 text-sm mb-3">Member</p>
+                    <p class="text-gray-600 text-sm mb-4">Leading our product development with experience of cosmetic chemistry.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="team-card bg-white rounded-lg shadow-md overflow-hidden fade-in">
+                <div class="aspect-square bg-gray-100">
+                    <img src="" alt="Chit Chimy" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-semibold text-gray-800 mb-1">Chit Chimy</h3>
+                    <p class="text-pink-600 text-sm mb-3">Member</p>
+                    <p class="text-gray-600 text-sm mb-4">Building our community and spreading the love for natural beauty worldwide.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="team-card bg-white rounded-lg shadow-md overflow-hidden fade-in">
+                <div class="aspect-square bg-gray-100">
+                    <img src="" alt="Bi Aruntitya" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 text-center">
+                    <h3 class="font-semibold text-gray-800 mb-1">Bi Aruntitya</h3>
+                    <p class="text-pink-600 text-sm mb-3">Member</p>
+                    <p class="text-gray-600 text-sm mb-4">Crafting beautiful packaging and memorable brand experiences.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-pink-500 to-pink-600">
+        <div class="container mx-auto px-4 text-center fade-in">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Start Your Beauty Journey?</h2>
+            <p class="text-pink-100 mb-8 max-w-2xl mx-auto">
+                Join thousands of satisfied customers who have discovered the power of natural skincare with Love Care.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="shop.html" class="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                    Shop Now
+                </a>
+                <a href="contact.html" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-pink-600 transition-colors">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-100 border-t border-pink-200 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-gray-800 mb-4">Lσʋҽ <span class="text-pink-500">Cαɾҽ</span></h3>
+                    <p class="text-gray-600 text-sm mb-4">Premium beauty and skincare products for your daily routine.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-pink-600 transition-colors">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="index.html" class="hover:text-pink-600 transition-colors">Home</a></li>
+                        <li><a href="shop.html" class="hover:text-pink-600 transition-colors">Shop</a></li>
+                        <li><a href="about.html" class="hover:text-pink-600 transition-colors">About</a></li>
+                        <li><a href="contact.html" class="hover:text-pink-600 transition-colors">Contact</a></li>
+                        <li><a href="cart.html" class="hover:text-pink-600 transition-colors">Cart</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">Customer Service</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="#" class="hover:text-pink-600 transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-pink-600 transition-colors">Shipping</a></li>
+                        <li><a href="#" class="hover:text-pink-600 transition-colors">Returns</a></li>
+                        <li><a href="#" class="hover:text-pink-600 transition-colors">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-800 mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><i class="fas fa-envelope mr-2"></i>info@lovecare.com</li>
+                        <li><i class="fas fa-phone mr-2"></i>(855) 962-682-908</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>123 Beauty St, Phnom Penh City</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="border-t border-pink-200 mt-8 pt-8 text-center text-sm text-gray-600">
+                <p>&copy; 2025 Lσʋҽ <span class="text-pink-500">Cαɾҽ</span>. All rights reserved. | <a href="#" class="hover:text-pink-600">Privacy Policy</a> | <a href="#" class="hover:text-pink-600">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
